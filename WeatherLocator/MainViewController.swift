@@ -37,6 +37,10 @@ class MainViewController: UIViewController, UITextFieldDelegate, CLLocationManag
         {
             locationManager!.requestWhenInUseAuthorization()
         }
+        else
+        {
+            locationManager!.startUpdatingLocation()
+        }
     }
     
     // MARK: - CLLocationManager delegate
