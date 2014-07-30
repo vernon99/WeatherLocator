@@ -54,8 +54,8 @@ class DataLoader {
             
             if let data:NSData = data {
                 
+                // Create string and dictionary from NSData
                 var dataString = NSString(data: data, encoding: NSUTF8StringEncoding)
-                
                 if dataString.length > 0
                 {
                     NSLog("Data: \(dataString).")

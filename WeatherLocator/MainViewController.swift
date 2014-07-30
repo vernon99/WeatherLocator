@@ -29,6 +29,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, CLLocationManag
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Initialize location manager
         locationManager = CLLocationManager()
         locationManager!.delegate = self
         locationManager!.desiredAccuracy = kCLLocationAccuracyThreeKilometers
@@ -131,7 +132,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, CLLocationManag
                 
                 self.resultsCard!.alpha = 0.0
                 self.noResults!.alpha = 1.0
-                if stillUpdatingLocation
+                if self.stillUpdatingLocation
                 {
                     self.noResults!.text = "Still updating geo-location"
                 }
